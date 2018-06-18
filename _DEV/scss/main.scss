@@ -1,0 +1,1109 @@
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url("fonts/proximanova/proximanova-semibold-webfont.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "ProximaNova-Light";
+  src: url("fonts/proximanova/ProximaNova-Light.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "FreightBig Pro";
+  src: url("fonts/freight/FreightBigProBold-Regular.woff") format("woff");
+  font-weight: 100;
+}
+
+
+
+html, body {
+	background-color: transparent;
+	color: #000;
+	color: #0a0a0a;
+}
+
+html {
+}
+
+.row .col {
+	padding: 0;
+}
+
+.branded {
+	color: #f15d22;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 1.0);
+  border-bottom: 1px solid rgba(241, 93, 34, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+footer ul {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+footer ul li {
+	display: inline;
+}
+
+footer ul a {
+	padding: 0 30px;
+}
+
+footer ul a i {
+	color: #fff;
+}
+
+
+
+/* These are the basic layouts */
+
+
+
+#hero_banner {
+	background-color: #f1f1f1;
+}
+
+#hero_cards {
+	min-height:200px;
+	background-color: #fff;
+}
+
+#contact_card {
+	min-height:200px;
+	background-color: #f3f3f3;
+}
+
+#footer {
+	min-height:200px;
+	background-color: #333;
+}
+
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+
+a {
+	color: #000;
+}
+
+
+/* This is where our widget styles are going to go */
+
+nav {
+	display: none;
+
+	a.sidenav-trigger {
+	    float: right;
+	    position: relative;
+	    z-index: 1;
+	    height: 100%;
+
+	    img#menu_icon {
+			padding: 24px 20px 23px;
+		}
+	}
+}
+
+
+/* This is a widget */
+
+
+ul.primay_nav {
+	margin: 0 auto;
+	font-family: ProximaNova-Semibold;
+	text-transform: uppercase;
+	text-align: left;
+
+	li {
+		font-size: 13px;
+		letter-spacing: 2px;
+		line-height: 28px;
+		margin: 19px 15px 10px;
+
+		a {
+			display: block;
+			width: 100%;
+			color: #999;
+			border-bottom: 1px solid #999;
+		}
+		a:hover {
+			background: none;
+		}
+	}
+}
+
+#main {
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 0;
+
+
+
+	#menu {
+		text-align: center;
+
+		#nav-desktop {
+			li {
+				a {
+					position: relative;
+
+					span {
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 0;
+						margin-top: 0px;
+						height: 100%;
+						overflow: hidden;
+						border-bottom: 1px solid #000;
+						-webkit-transition: 0.6s;
+						-o-transition: 0.6s;
+						transition: 0.6s;
+					}
+					span:before {
+						content: attr(rel);
+						position: absolute;
+						margin: 0;
+						left: 0;
+						top: 0;
+						padding: 0;
+						color: #000;
+					}
+				}
+				a:hover {
+					span {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	#sidebar {
+		flex: 1 auto;
+		max-width: 160px;
+		min-width:0;
+		max-height:0;
+
+		#logo_big {
+			display: block;
+			margin: 40px auto 65px;
+		}
+	}
+	#content {
+		flex: 1 1;
+		min-width:0;
+		max-height:0;
+
+		#hero_nav {
+			position: relative;
+			float: right;
+			top: 480px;
+			left: -50px;
+			z-index: 999;
+			
+			.slick-dots li button:before {
+				opacity: 0.75;
+			}
+			.slick-dots li.slick-active button:before {
+				color: #ff2f92;
+			}
+
+		}
+		#hero_banner {
+			margin: 0;
+		}
+		#hero_banner div.slide {
+			padding: 0px;
+			position: relative;
+			height:100vh;
+			max-height: 1000px;
+
+			div.image {
+				height:100vh;
+				max-height: 1000px;
+				width:100%;
+				position: absolute;
+				position: relative;
+				top: 0;
+				left: 0;
+				background-position: 0 center; /* move to right beyond 200px */
+				background-repeat: no-repeat;
+				background-color: #f1f1f1;
+				background-size: cover;
+			}
+			div.copy {
+				position: absolute;
+				top: 38%;
+				left: 5%;
+				left: auto;
+				padding-left: 100px;
+				width: 50%;
+				background: transparent;
+
+				h2 {
+					margin: 0;
+					font-family: 'FreightBig Pro';
+					font-size: 70px;
+					padding-bottom: 0.35em;
+					line-height: 0.8;
+				}
+				span {
+					display: block;
+					max-width: 475px;
+					font-family: 'ProximaNova-Light';
+					font-size: 16px;
+					font-weight: bold;
+					line-height: 1.8em;
+					color: #44444E;
+				}
+				span.actioncall {
+					margin-top: 10px;
+					font-size: 14px;
+					text-transform: uppercase;
+					font-family: ProximaNova-Semibold;
+					letter-spacing: 3px;
+					display: inline-block;
+					padding-bottom: 2px;
+
+					a {
+						position: relative;
+						margin-top: 20px;
+						font-size: 14px;
+						text-transform: uppercase;
+						font-family: ProximaNova-Semibold;
+						letter-spacing: 3px;
+						border-bottom: 2px solid black;
+						display: inline-block;
+						padding-top: 5px;
+						padding-bottom: 2px;
+					}
+					a:after {
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 100%;
+						height: 2px;
+						content: '';
+						transition: top 0.6s, opacity 0.6s, transform 0.6s;
+						background: #000;
+					}
+					a:hover::after {
+						top: 0%;
+						opacity: 1;
+					}
+				}
+
+				ul {
+					margin: 50px auto 0;
+					text-align: left;
+
+					li {
+						display: inline-block;
+						vertical-align: top;
+						width: 150px;
+						max-width: 180px;
+						text-align: center;
+
+						a {
+							width: 100%;
+							max-width: 150px;
+							margin: 0;
+							display: block;
+
+							img {
+								display: block;
+								margin: 0 auto 18px;
+							}
+							span {
+								display: block;
+								line-height: 14px;
+								font-family: ProximaNova-Semibold;
+								font-size: 12px;
+								text-transform: uppercase;
+								letter-spacing: 1px;
+								color: #000;
+							}
+						}
+					}
+				}
+			}
+		}
+		#hero_cards > div {
+
+			div.image, div.copy {
+				position: relative;
+				width: 50%;
+				overflow: hidden;
+
+				> div {
+					position:  absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					text-align: center;
+				}
+			}
+			div.image:before, div.copy:before {
+				content: "";
+				display: block;
+				padding-top: 100%;
+			}
+			div.image {
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			div.copy {
+				> div {
+					top: 20%;
+					padding: 0 10%;
+					text-align: left;
+
+					h3 {
+						margin: 0;
+						font-family: 'FreightBig Pro';
+						font-size: 70px;
+						padding-bottom: 0.35em;
+						line-height: 1;
+					}
+					span {
+						font-family: 'ProximaNova-Light';
+						font-size: 16px;
+						line-height: 1.8em;
+						font-weight: bold;
+						color: #888;
+					}
+					a {
+						position: relative;
+						margin-top: 20px;
+						font-size: 14px;
+						text-transform: uppercase;
+						font-family: ProximaNova-Semibold;
+						letter-spacing: 3px;
+						border-bottom: 2px solid black;
+						display: inline-block;
+						padding-top: 3px;
+						padding-bottom: 2px;
+					}
+					a:after {
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 100%;
+						height: 2px;
+						content: '';
+						transition: top 0.6s, opacity 0.6s, transform 0.6s;
+						background: #000;
+					}
+					a:hover::after {
+						top: 0%;
+						opacity: 1;
+					}
+				}
+			}
+		}
+		#hero_cards > div:nth-child(2n+2) div.image {
+			float: right;
+		}
+		#hero_cards > div:nth-child(2n+1) div.image {
+			float: left;
+			img {
+				-webkit-transition: -webkit-transform 6s ease-in-out;
+				transition: -webkit-transform 6s ease-in-out;
+				transition: transform 6s ease-in-out;
+				transition: transform 6s ease-in-out,-webkit-transform 6s ease-in-out;
+			}
+		}
+		#hero_cards > div:nth-child(2n+1) div.image:hover {
+			img {
+				transform: scale(1.3);
+			}
+		}
+		#contact_card {
+			text-align: center;
+			width: 100%;
+			padding: 100px 10% 120px;
+
+			> div {
+				width: 600px;
+				margin: 0 auto;
+
+				h2 {
+					margin: 0;
+					font-family: 'FreightBig Pro';
+					font-size: 70px;
+					padding-bottom: 0.35em;
+					line-height: 0.8;
+				}
+				span {
+					display: block;
+					padding-top: 25px;
+					font-family: 'ProximaNova-Light';
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 1.8em;
+					color: #888;
+				}
+				a {
+					margin-top: 0px;
+					font-size: 14px;
+					text-transform: uppercase;
+					font-family: ProximaNova-Semibold;
+					letter-spacing: 3px;
+					border-bottom: 3px solid black;
+					display: inline-block;
+					padding-bottom: 2px;
+				}
+				form {
+					margin-top: 40px;
+
+					input {
+						padding: 7px 0;
+						text-indent: 20px;
+						border: 2px solid #e5e5e5;
+						border-top-right-radius: 7px;
+						border-top-left-radius: 7px;
+						border-bottom-right-radius: 7px;
+						border-bottom-left-radius: 7px;
+						background-color: #fff;
+					}
+					input:focus {
+						border: 2px solid #c7c7c7;
+						box-shadow: 0 0 5px #cacaca;
+						transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+					}
+				}
+			}
+		}
+		#footer {
+			background-color: #1A191F;
+			padding-top: 90px;
+
+			ul.social {
+				margin-bottom: 45px;
+
+				a {
+					display: inline-block;
+					width: 48px;
+					height: 48px;
+					margin: 0 5px;
+					padding: 12px;
+					border: 2px solid #2E2E31;
+					border-top-right-radius: 24px;
+					border-top-left-radius: 24px;
+					border-bottom-right-radius: 24px;
+					border-bottom-left-radius: 24px;
+
+					i {
+						font-size: 16px;
+						transition: color 0.5s linear;
+					}
+					span {
+						display: none;
+					}
+				}
+				a:hover {
+					i {
+						color: #ff2f92;
+					}
+				}
+			}
+			ul.partners {
+				li {
+					display: inline-block;
+					width: 116px;
+				}
+			}
+			hr {
+				width: 75%;
+				text-align: center;
+				margin: 20px auto 40px;
+				height: 1px;
+				color: #3B3A3C;
+				background-color: #3B3A3C;
+				border: none;
+				border-bottom: 1px solid #242328;
+			}
+			#copyright {
+				text-align: center;
+				display: block;
+				margin: 0 auto;
+				padding: 5px 0 45px;
+				font-size: 11px;
+				color: #808083;
+			}
+		}
+	}
+}
+
+#sidenav-overlay {
+	background-color: rgba(0, 0, 0, 0.0);
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 2160px)
+{
+	#main {
+		#content {
+			#hero_banner div.slide {
+				div.image
+				{
+					background-size: auto;
+					background-position: 0 0;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1920px)
+{
+
+	#main {
+		#content {
+			#hero_banner div.slide {
+				div.image
+				{
+					background-size: auto;
+					background-position: -100px 0;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1600px)
+{
+	#main {
+		#content {
+			#hero_banner div.slide {
+				div.image
+				{
+					background-size: auto;
+					background-position: -200px 0;
+				}
+				div.copy {
+					h2 {
+						font-size: 61px;
+					}
+					span {
+						font-size: 14px;
+					}
+					ul {
+						li {
+							a {
+								font-size: 11px;
+							}
+						}
+					}
+				}
+			}
+			#hero_cards > div {
+				div.copy {
+					> div {
+						top: 15%;
+
+						h3 {
+							font-size: 61px;
+						}
+						span {
+							font-size: 14px;
+						}
+						a {
+							font-size: 13px;
+						}
+					}
+				}
+			}
+			#contact_card {
+				> div {
+					h2 {
+						font-size: 61px;
+					}
+					span {
+						font-size: 14px;
+					}
+					a {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1440px)
+{
+	#main {
+		#content {
+			#hero_banner div.slide {
+				div.image
+				{
+					background-size: auto;
+					background-position: -300px 0;
+				}
+			}
+			#hero_cards > div {
+				div.copy {
+					> div {
+						top: 12%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1280px)
+{
+	#main {
+		#content {
+			#hero_banner div.slide {
+				div.copy {
+					h2 {
+						font-size: 54px;
+					}
+					span {
+						font-size: 13px;
+					}
+					ul {
+						li {
+							width: 140px;
+
+							a {
+								font-size: 10px;
+							}
+						}
+					}
+				}
+			}
+			#hero_cards > div {
+
+				div.image, div.copy {
+					position: relative;
+					width: 100%;
+					overflow: hidden;
+	
+					> div {
+						position:  relative;
+						top: auto;
+						left: auto;
+						bottom: auto;
+						right: auto;
+						text-align: center;
+					}
+				}
+				div.image:before, div.copy:before {
+					content: "";
+					display: block;
+					padding-top: 0;
+				}
+				div.image {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+				div.copy {
+					padding: 20% 0;
+					> div {
+						top: 0;
+						text-align: left;
+
+						h3 {
+							font-size: 54px;
+						}
+						span {
+							font-size: 13px;
+						}
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			#contact_card {
+				> div {
+					h2 {
+						font-size: 54px;
+					}
+					span {
+						font-size: 13px;
+					}
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/* Second shrink step */
+@media only screen and (max-width: 1024px)
+{
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		display: block;
+		height: 64px;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.04), 0 1px 5px 0 rgba(0, 0, 0, 0.03), 0 3px 1px -2px rgba(0, 0, 0, 0.05);
+
+		.brand-logo {
+		    left: 55px;
+		    top: 7px;
+		    transform: translateX(-50%);
+		}
+		#nav-mobile {
+			top: 64px;
+			border-right: none;
+			border-right: none;
+		}
+		.side-nav {
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.97);
+			box-shadow: none;
+
+			li:hover {
+				background: none;
+			}
+		}
+	}
+	#sidebar {
+		display: none;
+	}
+	#main {
+		#content {
+			width: 100%;
+
+			#hero_banner div.slide {
+				div.copy {
+					width: 75%;
+
+					h2 {
+						font-size: 54px;
+					}
+					span {
+						font-size: 13px;
+					}
+					ul {
+						li {
+							width: 140px;
+
+							a {
+								font-size: 10px;
+							}
+						}
+					}
+				}
+			}
+			#hero_cards > div {
+				div.image {
+					width: 100%;
+				}
+				div.copy {
+					width: 100%;
+
+					> div {
+						top: 30%;
+
+						h3 {
+							font-size: 54px;
+						}
+						span {
+							font-size: 13px;
+						}
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			#contact_card {
+				> div {
+					h2 {
+						font-size: 54px;
+					}
+					span {
+						font-size: 13px;
+					}
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px)
+{
+	#main {
+		#content {
+			width: 100%;
+
+			#hero_banner div.slide {
+				div.copy {
+					h2 {
+						font-size: 54px;
+					}
+					span {
+						font-size: 13px;
+					}
+					ul {
+						li {
+							width: 140px;
+
+							a {
+								font-size: 10px;
+							}
+						}
+					}
+				}
+			}
+			#hero_cards > div {
+				div.image {
+					width: 100%;
+				}
+				div.copy {
+					width: 100%;
+
+					> div {
+						top: 20%;
+
+						h3 {
+							font-size: 54px;
+						}
+						span {
+							font-size: 13px;
+						}
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			#contact_card {
+				> div {
+					width: auto;
+
+					h2 {
+						font-size: 54px;
+					}
+					span {
+						font-size: 13px;
+					}
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+@media only screen and (max-width: 600px)
+{
+	#main {
+		#content {
+			#hero_banner div.slide {
+				height: auto;
+
+				div.copy {
+					width: auto;
+					padding: 0 20px;
+
+					h2 {
+						font-size: 36px;
+					}
+					span {
+						font-size: 13px;
+					}
+					ul {
+						text-align: center;
+
+						li {
+							display: block;
+							width: 140px;
+							margin: 0 auto;
+
+							a {
+								font-size: 10px;
+							}
+						}
+					}
+				}
+			}
+			#hero_cards > div {
+				div.copy {
+
+					> div {
+						top: 20%;
+
+						h3 {
+							font-size: 36px;
+						}
+						span {
+							font-size: 13px;
+						}
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			#contact_card {
+				> div {
+					h2 {
+						font-size: 36px;
+					}
+					span {
+						font-size: 13px;
+					}
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@media only screen and (max-width: 480px)
+{
+	#main {
+		#content {
+			#hero_banner div.slide {
+				div.copy {
+					h2 {
+						font-size: 28px;
+					}
+					span {
+						font-size: 13px;
+					}
+					ul {
+						li {
+							width: 140px;
+
+							a {
+								font-size: 10px;
+							}
+						}
+					}
+				}
+			}
+			#hero_cards > div {
+				div.copy {
+
+					> div {
+						top: 20%;
+
+						h3 {
+							font-size: 28px;
+						}
+						span {
+							font-size: 13px;
+						}
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			#contact_card {
+				> div {
+					h2 {
+						font-size: 28px;
+					}
+					span {
+						font-size: 13px;
+					}
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+
+
+			#footer {
+				padding-top: 60px;
+	
+				ul.social {
+					margin-bottom: 45px;
+	
+					a {
+						display: inline-block;
+						width: 36px;
+						height: 36px;
+						margin: 0 4px;
+						padding: 6px;
+						border: 2px solid #2E2E31;
+						border-top-right-radius: 18px;
+						border-top-left-radius: 18px;
+						border-bottom-right-radius: 18px;
+						border-bottom-left-radius: 18px;
+
+						i {
+							font-size: 13px;
+							transition: color 0.5s linear;
+						}
+						span {
+							display: none;
+						}
+					}
+				}
+				ul.partners {
+					li {
+						display: inline-block;
+						width: 80px;
+						
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+				hr {
+					margin: 20px auto;
+				}
+				#copyright {
+					padding: 5px 0 30px;
+					font-size: 11px;
+				}
+			}
+
+
+		}
+	}
+
+}
+
+
+.animated {
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+}
+
+
